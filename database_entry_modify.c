@@ -33,11 +33,8 @@ void Edit_Configuration()
 	fseek(fp,0,2);
 	size=ftell(fp)+1;
 	rewind(fp);
-// 	printf("\nsize:%d\n",size);
 	str=calloc(1,size);
-	
 	fread(str,size-1,1,fp);
- //	puts(str);
 
 	PageArray[pageno++]=i;
 		
@@ -210,7 +207,6 @@ PREV:
 				printf("\n Back to Main Menu:\n");
 				system("clear");
 				return;
-				
 			default:
 				printf(" Invalid choice:\n");
 
@@ -250,7 +246,6 @@ void read_file(void)
 	}
 	fclose(fp);	
 	read_flag=1;
-
 }
 
 void Modify_Entry()
@@ -318,7 +313,6 @@ void Modify_Entry()
 	printf("\n Entry Modified Successfully\n");
 }
 
-
 void Remove_Entry()
 {
 	unsigned int temp=0;
@@ -363,8 +357,6 @@ void Remove_Entry()
 	fclose(fp);
 	printf("\n Entry %d Deleted Successfully\n",entry);
 }
-
-
 
 void Add_Entry()
 {
@@ -460,9 +452,6 @@ void Add_Given_Pos()
 	printf("\n Entry added at perticular position Successfully\n");
 }
 
-
-
-
 void Database_Menu()
 {
 
@@ -473,7 +462,6 @@ void Database_Menu()
         printf("\n\r S.No.    IMEI No.              Local IP   ");
 	printf("\n\r ---------------------------------------------------------\n\r");
 }
-
 
 int main()
 {
